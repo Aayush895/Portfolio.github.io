@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Nav Bar */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 20px;
+    background-color: black;
+}
+
+nav img {
+    position: relative;
+    left: 15%;
+    cursor: pointer;
+}
+
+nav ul li{
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    right: 15%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+nav ul li a:hover {
+    border-bottom: solid 2px;
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+/* Content-Body */
+
+#content {
+    background-color: chocolate;
+    background-size: cover;
+    height: 95vh;
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+}
+
+.info span {
+    color: maroon;
+}
+
+.info h1 {
+    color: white;
+    font-size: 70px;
+    font-family: 'Poppins','sans-serif';
+}
+
+/* Why is margin-top not working with '.info a' */
+
+.info p {
+    color: white;
+    font-size: 35px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Poppins','sans-serif';
+}
+
+.info a {
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+    transition: ease-in;
+    transition-duration: 200ms;
+    font-family: 'Poppins','sans-serif';
+}
+
+.info a:hover {
+    border-bottom: solid 2px;
+}
+
+#images {
+    width: 35%;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}
+
+.shape {
+    width: 100%;
+    transition: ease-in 700ms;
+}
+/* Does translatex(-50%) pushes the element 50% to negative of x with respect to the parent div? */
+/* Does translation make the transition smoother compared to position elements such as top bottom etc? */
+.trans-img {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    /* border-radius: 50%; */
+    transition: ease-in 700ms;
+}
+
+/* How does position inherit works here? */
+
+.trans-img-2 {
+    position: inherit;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    opacity: 0;
+    transition: ease-in 700ms;
+}
+
+#images:hover .shape{
+    transform: translateY(-5%);
+}
+
+#images:hover .trans-img {
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+#images:hover .trans-img-2 {
+    transform: translateX(-50%); 
+    border-radius: 50%;
+    opacity: 1;
+}
+
+
+
